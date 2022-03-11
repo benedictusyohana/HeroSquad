@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.moringa.HeroSquad'
+version '1.0-SNAPSHOT'
+
+//noinspection GroovyUnusedAssignment
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation 'com.sparkjava:spark-core:2.9.3'
+    implementation 'com.sparkjava:spark-template-handlebars:2.7.1'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+}
+
+test {
+    useJUnitPlatform()
+}
