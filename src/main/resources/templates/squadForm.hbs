@@ -1,0 +1,66 @@
+{{#partial "styles"}}
+
+    <link rel='stylesheet' href='/css/squadForm.css'>
+
+{{/partial}}
+
+{{#partial "content"}}
+
+
+    <h2>FILL THE FORM BELOW TO CREATE A NEW SQUAD</h2>
+    <form action="/squads" method="post">
+        <div class="form-group">
+            <label for="squadName">Name</label>
+            <input type="text" class="form-control" name="squadName" id="squadName" placeholder="Name of the squad" required>
+        </div>
+
+        <div class="form-group">
+            <label for="squadCause">Cause</label>
+            <input type="text" class="form-control" name="squadCause" id="squadCause" placeholder="What does this squad fight against?" required>
+        </div>
+
+        <div class="form-group">
+            <label for="squadSize">Size Limit</label>
+            <input type="number" class="form-control" name="squadSize" id="squadSize" placeholder="How many heroes should be in this squad?" required>
+        </div>
+
+        <div class="form-group">
+            <label for="squadHeroes">Available Heroes</label>
+
+            {{#if heroes}}
+                {{#each heroes}}
+                    {{#if squadMember}}
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="squadHeroes" id={{id}} value={{id}} disabled>
+                            <label class="form-check-label" for="squadHeroes">
+                                {{name}}
+                            </label>
+                        </div>
+
+                    {{else}}
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="squadHeroes" id={{id}} value={{id}}>
+                            <label class="form-check-label" for="squadHeroes">
+                                {{name}}
+                            </label>
+                        </div>
+
+                    {{/if}}
+
+                {{/each}}
+            {{else}}
+
+                <p>Oops, it appears there aren't enough heroes. Create more heroes <a href="/heroes/new" style="text-decoration: none;">here</a>.</p>
+
+            {{/if}}
+        </div>
+
+        <button type="submit" class="btn btn-info my-2 my-sm-0">Create Squad</button>
+    </form>
+
+
+{{/partial}}
+
+{{> layout.hbs}}
