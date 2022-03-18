@@ -1,0 +1,67 @@
+.container{
+    margin-top: 0;
+}
+
+body{
+    background-image: url("../images/galaxy1.jpg");
+}
+
+h2{
+    text-align: center;
+    padding: 2em;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+    color: white;
+}
+
+#hero{
+    margin: 1em;
+}
+
+#heroImage{
+    width: inherit;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.card-text{
+    list-style: square;
+    margin: 1.5em;
+}
+
+.card-text li{
+    line-height: 2.5;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.card-text li span{
+    font-style: italic;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+#noHeroes{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 4em;
+    color: white;
+}
+
+.btn-info{
+    padding: 0.5em;
+    text-decoration: none;
+    margin: 1em;
+}
+
+.btn-info:hover{
+    background-color: gold;
+    transition: 1500ms;
+}

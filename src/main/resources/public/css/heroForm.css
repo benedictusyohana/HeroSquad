@@ -1,0 +1,39 @@
+body{
+    background-image: url("../images/spiderman1.jpg");
+}
+
+h2{
+    text-align: center;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+    text-shadow: 0.1rem 0.1rem 0.5rem #333;
+}
+
+form{
+    border: 2px solid white;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    padding: 1em;
+}
+
+.form-group{
+    padding: 0.5em;
+}
+
+label{
+    color:gold;
+    text-shadow: 0.1rem 0.1rem 0.7rem #333;
+}
+
+.btn{
+    margin-top: 1.5em;
+}
+
+.btn:hover{
+    background-color: gold;
+    color: black;
+    transition: 1500ms;
+    border: none;
+}
