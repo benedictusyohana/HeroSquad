@@ -16,6 +16,8 @@ repositories {
 dependencies {
     implementation 'com.leacox.process:process-warden:1.1.0'
     implementation 'com.sshtools:forker-client:1.6.4'
+    implementation 'junit:junit:4.13.2'
+    implementation 'junit:junit:4.13.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     implementation 'com.sparkjava:spark-core:2.9.3'
